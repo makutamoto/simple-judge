@@ -14,15 +14,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Install Dependencies
+      - name: Install Dependencies and Transpile typescript.
         run: |
           yarn global add serverless
-          for directory in ./function-*; do
+          cd functions
+          yarn
+          for directory in ./*; do
             cd $directory
             yarn
-            yarn tsc
             cd ..
           done
+          yarn tsc
+          cd ..
       - name: Deploy to AWS
         run: $(yarn global bin)/sls deploy
         env:
