@@ -1,0 +1,25 @@
+name: CI & CD for AWS
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    name: CD for AWS
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install Dependencies
+        run: |
+          yarn global add serverless
+          yarn
+      - name: Deploy to AWS
+        run: $(yarn global bin)/sls deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
