@@ -18,7 +18,10 @@ jobs:
         run: |
           yarn global add serverless
           for directory in ./function-*; do
-            cd $directory && yarn && cd ..
+            cd $directory
+            yarn
+            yarn tsc
+            cd ..
           done
       - name: Deploy to AWS
         run: $(yarn global bin)/sls deploy
