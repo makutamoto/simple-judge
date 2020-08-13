@@ -12,7 +12,9 @@
 # Happy Coding!
 org: makutamoto
 app: simple-judge-2
-service: simple-judge-2
+
+# service: simple-judge-2
+
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
 #org: your-org-name
@@ -21,10 +23,10 @@ service: simple-judge-2
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"
 
-provider:
-  name: aws
-  runtime: nodejs12.x
-  region: ap-northeast-1
+# provider:
+#   name: aws
+#   runtime: nodejs12.x
+#   region: ap-northeast-1
 
 # you can overwrite defaults here
 #  stage: dev
@@ -49,21 +51,25 @@ provider:
 # you can define service wide environment variables here
 #  environment:
 #    variable1: value1
-package:
-  individually: true
-  exclude:
-    - ./*/**
-functions:
-  compiler:
-    handler: build/compiler/src/index.handler
-    package:
-      include:
-        - build/compiler/**
-  runner:
-    handler: build/runner/src/index.handler
-    package:
-      include:
-        - build/runner/**
+
+
+# package:
+#   individually: true
+#   exclude:
+#     - ./*/**
+# functions:
+#   compiler:
+#     handler: build/compiler/src/index.handler
+#     package:
+#       include:
+#         - build/compiler/**
+#   runner:
+#     handler: build/runner/src/index.handler
+#     package:
+#       include:
+        # - build/runner/**
+
+
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
