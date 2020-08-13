@@ -48,12 +48,10 @@ provider:
 # you can define service wide environment variables here
 #  environment:
 #    variable1: value1
-
-# you can add packaging information here
 package:
   indivisually: true
   exclude:
-    - ./*
+    - function-runner/**
 functions:
   compiler:
     handler: function-compiler/index.handler
