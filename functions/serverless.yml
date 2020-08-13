@@ -55,15 +55,15 @@ package:
     - ./*/**
 functions:
   compiler:
-    handler: functions/build/compiler/src/index.handler
+    handler: build/compiler/src/index.handler
     package:
       include:
-        - functions/build/compiler/**
+        - build/compiler/**
   runner:
-    handler: functions/build/runner/src/index.handler
+    handler: build/runner/src/index.handler
     package:
       include:
-        - functions/build/runner/**
+        - build/runner/**
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
