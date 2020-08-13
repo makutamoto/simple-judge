@@ -12,11 +12,6 @@
 # Happy Coding!
 org: makutamoto
 app: simple-judge-2
-
-frontend:
-  component: "@sls-next/serverless-component@1.16.0"
-  inputs:
-    nextConfigDir: frontend
 # service: simple-judge-2
 
 # app and org for use with dashboard.serverless.com
