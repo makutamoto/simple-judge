@@ -10,7 +10,8 @@
 #    docs.serverless.com
 #
 # Happy Coding!
-
+org: makutamoto
+app: simple-judge-2
 service: simple-judge-2
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
@@ -63,11 +64,6 @@ functions:
     package:
       include:
         - functions/build/runner/**
-
-frontend:
-  component: serverless-next.js
-  inputs:
-      nextConfigDir: frontend
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
