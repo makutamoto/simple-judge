@@ -61,8 +61,6 @@ functions:
   runner:
     handler: function-runner/index.handler
     package:
-      exclude:
-        - ./*/**
       include:
         - function-runner/**
 #    The following are a few example events you can configure
