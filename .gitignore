@@ -6,4 +6,4 @@ jspm_packages
 # Serverless directories
 .serverless
 
-./function-*/build
+./*/build/**
