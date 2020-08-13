@@ -63,7 +63,7 @@ functions:
     handler: function-compiler/index.handler
     package:
       exclude:
-        - ./*/**
+        - function-runner/**
       include:
         - function-compiler/**
   runner:
