@@ -19,7 +19,7 @@ jobs:
           yarn global add serverless
           cd functions
           yarn
-          for directory in ./*; do
+          for directory in $(ls -d */); do
             cd $directory
             yarn
             cd ..
