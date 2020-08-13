@@ -49,9 +49,9 @@ provider:
 #  environment:
 #    variable1: value1
 package:
-  indivisually: true
+  individually: true
   exclude:
-    - function-runner/**
+    - ./*/**
 functions:
   compiler:
     handler: function-compiler/index.handler
