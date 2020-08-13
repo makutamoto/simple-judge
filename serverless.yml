@@ -14,7 +14,7 @@ org: makutamoto
 app: simple-judge-2
 
 frontend:
-  component: "@sls-next/serverless-component"
+  component: "@sls-next/serverless-component@1.16.0"
   inputs:
     nextConfigDir: frontend
 # service: simple-judge-2
