@@ -1,4 +1,5 @@
-org: makutamoto
-app: simple-judge-2
-component: serverless-next.js
-name: frontend
+#app: simple-judge-2
+
+frontend:
+  component: serverless-next.js
+ # name: frontend
