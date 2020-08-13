@@ -17,7 +17,9 @@ jobs:
       - name: Install Dependencies
         run: |
           yarn global add serverless
-          yarn
+          for directory in ./function-*; do
+            cd $directory && yarn && cd ..
+          done
       - name: Deploy to AWS
         run: $(yarn global bin)/sls deploy
         env:
