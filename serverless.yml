@@ -50,20 +50,14 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
-
+package:
+  indivisually: true
+  exclude:
+    - ./*
 functions:
   compiler:
     handler: function-compiler/index.handler
     package:
-      exclude:
-        - function-runner/**
       include:
         - function-compiler/**
   runner:
