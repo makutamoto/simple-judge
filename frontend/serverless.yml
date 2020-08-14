@@ -3,8 +3,8 @@
 # component: "@sls-next/serverless-component@1.16.0"
 
 
-app: fullstack-app
-service: fullstack-app
+org: makutamoto
+app: simple-judge-2
 component: website
 
 name: site
