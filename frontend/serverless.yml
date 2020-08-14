@@ -1,4 +1,19 @@
-frontend:
-  component: "@sls-next/serverless-component@1.16.0"
-  inputs:
-    nextConfigDir: frontend
+# org: makutamoto
+# name: frontend
+# component: "@sls-next/serverless-component@1.16.0"
+
+
+app: fullstack-app
+service: fullstack-app
+component: website
+
+name: site
+
+inputs:
+  # React application. "hook" runs before deployment to build the source code.  "dist" is the built artifact directory which is uploaded.
+  src:
+    src: ./
+    hook: yarn build
+    dist: .next
+  # Enable this when you want to set a custom domain.
+  # domain: ${env:domain}
