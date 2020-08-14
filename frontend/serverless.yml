@@ -13,7 +13,9 @@ inputs:
   # React application. "hook" runs before deployment to build the source code.  "dist" is the built artifact directory which is uploaded.
   src:
     src: ./
-    hook: yarn build
+    hook: |
+      yarn
+      yarn build
     dist: .next
   # Enable this when you want to set a custom domain.
   # domain: ${env:domain}
