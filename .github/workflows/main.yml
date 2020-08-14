@@ -16,6 +16,7 @@ jobs:
       - name: Install Dependencies
         run: |
           yarn global add serverless
+          cd frontend && yarn && cd ..
 
       - name: Deploy to AWS
         run: $(yarn global bin)/serverless
