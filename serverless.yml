@@ -12,7 +12,22 @@
 # Happy Coding!
 org: makutamoto
 app: simple-judge-2
-# service: simple-judge-2
+name: simple-judge-2
+
+compiler:
+  component: "@serverless/aws-lambda"
+  inputs:
+    name: compiler
+    region: ap-northeast-1
+    code: ./functions/build/compiler/src
+    handler: index.handler
+
+frontend:
+  component: "@sls-next/serverless-component@1.16.0"
+  inputs:
+    bucketRegion: ap-northeast-1
+    nextConfigDir: frontend
+
 
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
@@ -20,6 +35,7 @@ app: simple-judge-2
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
+# frameworkVersion: "0.0.3"
 # frameworkVersion: "=X.X.X"
 
 # provider:
@@ -66,7 +82,7 @@ app: simple-judge-2
 #     handler: build/runner/src/index.handler
 #     package:
 #       include:
-        # - build/runner/**
+#         - build/runner/**
 
 
 #    The following are a few example events you can configure

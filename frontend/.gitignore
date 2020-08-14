@@ -13,6 +13,7 @@
 /out/
 
 .serverless_nextjs
+next.config.*
 
 # production
 /build
