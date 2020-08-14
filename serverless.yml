@@ -10,9 +10,8 @@
 #    docs.serverless.com
 #
 # Happy Coding!
-# org: makutamoto
-# app: simple-judge-2
-# name: simple-judge-2
+org: makutamoto
+app: simple-judge-2
 
 compiler:
   component: "@serverless/aws-lambda"
