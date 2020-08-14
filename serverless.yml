@@ -16,10 +16,9 @@ app: simple-judge-2
 compiler:
   component: "@serverless/aws-lambda"
   inputs:
-    name: compiler
     region: ap-northeast-1
-    code: ./functions/build/compiler/src
-    handler: index.handler
+    code: functions
+    handler: build/compiler.handler
 
 frontend:
   component: "@sls-next/serverless-component@1.16.0"
