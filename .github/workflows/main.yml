@@ -16,7 +16,7 @@ jobs:
       - name: Install Dependencies
         run: |
           yarn global add serverless
-          cd functions
+          cd backend
           yarn
           yarn tsc
           rm -rf src
@@ -25,7 +25,7 @@ jobs:
 
       - name: Deploy to AWS
         run: |
-          cd functions && $(yarn global bin)/serverless deploy && cd ..
+          cd backend && $(yarn global bin)/serverless deploy && cd ..
           cd frontend && $(yarn global bin)/serverless deploy && cd ..
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
