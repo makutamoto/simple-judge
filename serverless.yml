@@ -19,6 +19,12 @@ compiler:
     region: ap-northeast-1
     code: functions
     handler: build/compiler.handler
+runner:
+  component: "@serverless/aws-lambda"
+  inputs:
+    region: ap-northeast-1
+    code: functions
+    handler: build/runner.handler
 
 frontend:
   component: "@sls-next/serverless-component@1.16.0"
