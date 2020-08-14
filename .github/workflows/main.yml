@@ -18,7 +18,7 @@ jobs:
           yarn global add serverless
 
       - name: Deploy to AWS
-        run: $(yarn global bin)/sls deploy
+        run: $(yarn global bin)/serverless
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
