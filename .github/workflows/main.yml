@@ -8,7 +8,7 @@ jobs:
     name: Auto Deploy
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@maste
+      - uses: actions/checkout@master
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
