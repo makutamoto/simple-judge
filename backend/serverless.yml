@@ -1,0 +1,13 @@
+service: simple-judge-2
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-northeast-1
+package:
+  exclude:
+    - src/**
+functions:
+  compiler:
+    handler: build/compiler.handler
+  runner:
+    handler: build/runner.handler

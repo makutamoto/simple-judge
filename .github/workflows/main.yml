@@ -24,7 +24,9 @@ jobs:
           cd frontend && yarn && cd ..
 
       - name: Deploy to AWS
-        run: $(yarn global bin)/serverless
+        run: |
+          cd functions && $(yarn global bin)/serverless deploy && cd ..
+          cd frontend && $(yarn global bin)/serverless deploy && cd ..
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
